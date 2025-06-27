@@ -35,3 +35,4 @@ build/
 
 application-secrets.properties
 application.properties
+/src/main/java/com/videouploader/constants/GoogleOAuthConstants.java
