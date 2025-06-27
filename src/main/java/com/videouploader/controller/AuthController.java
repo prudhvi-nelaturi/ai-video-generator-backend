@@ -31,7 +31,7 @@ public class AuthController {
     public ResponseEntity<String> oauthCallback(@RequestParam("code") String code) {
 
         String tokenEndpoint = "https://oauth2.googleapis.com/token";
-//asdf
+
         MultiValueMap<String, String> requestBody = new LinkedMultiValueMap<>();
         requestBody.add("code", code);
         requestBody.add("client_id", CLIENT_ID);
