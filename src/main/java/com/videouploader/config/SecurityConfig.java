@@ -12,6 +12,8 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                .cors() // Enable CORS
+                .and()
                 .authorizeHttpRequests(requests -> requests
                         .requestMatchers("/", "/oauth2/**", "/success").permitAll()
                         .anyRequest().authenticated()
@@ -22,5 +24,3 @@ public class SecurityConfig {
         return http.build();
     }
 }
-
-
